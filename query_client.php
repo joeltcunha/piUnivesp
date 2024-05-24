@@ -3,46 +3,41 @@
 ?>
 <!DOCTYPE html>
 <html lang="br" data-bs-theme="dark">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Consulta de clientes</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
+<?php
 
-<body style="background-color:black;">
-    <h1> <span class="badge text-bg-secondary">PJ SISTEMA DE SEGURANÇA</span></h1>
-    <h2> <span class="badge text-bg-secondary">Consulta de clientes</span></h2>
-    <br>
+include ("head.php")
+?>
+<title>PJ Sistema de Segurança</title>
+<body>
+
+
+<?php
+include ("header.php");
+include ("navbar.php");
+?>
+
     <div class="form-check">
         <input class="form-check-input" type="radio" name="clientRadio" id="pessoaFisicaRadio" onclick="toggleForm('fieldsetPessoaFisica', 'fieldsetPessoaJuridica')">
-        <label class="form-check-label" for="pessoaFisicaRadio">
-            Pessoa física
-        </label>
+        <label class="form-check-label" for="pessoaFisicaRadio">Pessoa física</label>
     </div>
 
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="clientRadio" id="pessoaJuridicaRadio" checked onclick="toggleForm('fieldsetPessoaJuridica', 'fieldsetPessoaFisica')">
-        <label class="form-check-label" for="pessoaJuridicaRadio">
-            Pessoa jurídica
-        </label>
+        <input class="form-check-input" type="radio" name="clientRadio" id="pessoaJuridicaRadio" aria-checked="true" onclick="toggleForm('fieldsetPessoaJuridica', 'fieldsetPessoaFisica')">
+        <label class="form-check-label" for="pessoaJuridicaRadio">Pessoa jurídica</label>
     </div>
-
     <br>
     <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end" id="fieldsetPessoaJuridica">
-        <form action="#" onsubmit="return validarCNPJ()">
-            <div class="row col-12 mt-2">
-                <div class="col-md-6">
+        <form action="#" onsubmit="return validarCNPJ()" method="post" class="form-control">
+            <div class="row mt-2">
+                <div class="col-md-4">
                     <label for="razaoSocial" class="form-label">Razão Social</label>
                     <input type="text" class="form-control" id="razaoSocial" name="razao_social">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <label for="nomeFantasia" class="form-label">Nome Fantasia</label>
                     <input type="text" class="form-control" id="nomeFantasia" name="nome_fantasia">
                 </div>
-            </div>
-            <div class="row col-12 mt-2">
-                <div class="col-md-7">
+                <div class="col-md-4">
                     <label for="cnpj" class="form-label">CNPJ</label>
                     <div class="input-group">
                         <input type="text" class="form-control" id="cnpjJuridica" placeholder="Somente números" name="cnpj" aria-label="Somente números" aria-describedby="button-addon0" required>
@@ -51,17 +46,12 @@
                     <div class="invalid-feedback">CNPJ inválido. Favor digitar novamente.</div>
                 </div>
             </div>
+
             <!-- Restante dos campos para Pessoa Jurídica -->
             <!-- Botão de Cancelar e Limpar -->
-            <div class="mt-2 col-12 row">
-                <div class="col-md-6 align-items-center gy-4">
-                    <button value="cancel" class="btn btn-danger w-100 p-3" onclick="voltarPagina()">Cancelar</button>
-                </div>
-                <div class="col-md-6 align-items-center gy-4">
-                    <button type="reset" class="btn btn-secondary w-100 p-3">Limpar</button>
-                </div>
-            </div>
-
+            <?php
+            include "button-group.php";
+            ?>
         </form>
     </fieldset>
 
@@ -69,13 +59,12 @@
 
     <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end" id="fieldsetPessoaFisica" style="display:none;">
         <form action="#" onsubmit="return validarCPF()">
-            <div class="col-md-6">
-                <label for="nomeFisica" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nomeFisica" name="nome">
-            </div>
-
-            <div class="row col-12 mt-2">
-                <div class="col-md-7">
+            <div class="row mt-2">
+                <div class="col-md-4">
+                    <label for="nomeFisica" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nomeFisica" name="nome">
+                </div>
+                <div class="col-md-4">
                     <label for="cpf" class="form-label">CPF</label>
                     <div class="input-group">
                         <input type="text" class="form-control" id="cpfFisica" placeholder="Somente números" name="cpf" aria-label="Somente números" aria-describedby="button-addon2" required>
@@ -84,19 +73,16 @@
                     <div class="invalid-feedback">CPF inválido. Favor digitar novamente.</div>
                 </div>
             </div>
-            <!-- Restante dos campos para Pessoa Física -->
-            <!-- Botão de Cancelar e Limpar -->
-            <div class="mt-2 col-12 row">
-                <div class="col-md-6 align-items-center gy-4">
-                    <button value="cancel" class="btn btn-danger w-100 p-3" onclick="voltarPagina()">Cancelar</button>
-                </div>
-                <div class="col-md-6 align-items-center gy-4">
-                    <button type="reset" class="btn btn-secondary w-100 p-3">Limpar</button>
-                </div>
-            </div>
+
+            <?php
+            include "button-group.php"
+            ?>
         </form>
     </fieldset>
 
+<?php
+include "footer.php";
+?>
     <script>
         function consultarClienteJuridico() {
             const cnpj = document.getElementById("cnpjJuridica").value.replace(/\D/g, '');

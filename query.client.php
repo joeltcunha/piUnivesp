@@ -3,32 +3,31 @@
 ?>
 <!DOCTYPE html>
 <html lang="br" data-bs-theme="dark">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cadastro de clientes</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
+<?php
 
-<body style="background-color:black;">
-    <h1> <span class="badge text-bg-secondary">PJ SISTEMA DE SEGURANÇA</span></h1>
-    <h2> <span class="badge text-bg-secondary">Consulta de clientes</span></h2>
-    <br>
+include ("head.php")
+?>
+<title>Cadastro de clientes</title>
+<body>
+
+
+<?php
+include ("header.php");
+include ("navbar.php");
+?>
+
+
     <div class="form-check">
         <input class="form-check-input" type="radio" name="clientRadio" id="pessoaFisicaRadio" onclick="toggleForm('fieldsetPessoaFisica', 'fieldsetPessoaJuridica')">
-        <label class="form-check-label" for="pessoaFisicaRadio">
-            Pessoa física
-        </label>
+        <label class="form-check-label" for="pessoaFisicaRadio">Pessoa física</label>
     </div>
-
     <div class="form-check">
         <input class="form-check-input" type="radio" name="clientRadio" id="pessoaJuridicaRadio" checked onclick="toggleForm('fieldsetPessoaJuridica', 'fieldsetPessoaFisica')">
-        <label class="form-check-label" for="pessoaJuridicaRadio">
-            Pessoa jurídica
-        </label>
+        <label class="form-check-label" for="pessoaJuridicaRadio">Pessoa jurídica</label>
     </div>
-
     <br>
+<!--Início do formulário-->
+
     <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end" id="fieldsetPessoaJuridica">
         <form action="#" onsubmit="return validarCNPJ()">
             <div class="row col-12 mt-2">
@@ -96,6 +95,11 @@
             </div>
         </form>
     </fieldset>
+
+<?php
+    include "footer.php"
+
+?>
 
     <script>
         function consultarClienteJuridico() {
