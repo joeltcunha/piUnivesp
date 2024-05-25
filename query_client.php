@@ -50,7 +50,7 @@ include ("navbar.php");
             <!-- Restante dos campos para Pessoa Jurídica -->
             <!-- Botão de Cancelar e Limpar -->
             <?php
-            include "button-group.php";
+            include "button-group-insert.php";
             ?>
         </form>
     </fieldset>

@@ -83,10 +83,10 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input type="search" class="form-control me-2 placeholder="Pesquisa" aria-label="Search">
-                        <button class="btn btn-outline-dark" type="submit">Pesquisa</button>
-                    </form>
+<!--                    <form class="d-flex" role="search">-->
+<!--                        <input type="search" class="form-control me-2 placeholder="Pesquisa" aria-label="Search">-->
+<!--                        <button class="btn btn-outline-dark" type="submit">Pesquisa</button>-->
+<!--                    </form>-->
                 </div>
             </div>
         </nav>
