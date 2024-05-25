@@ -2,20 +2,23 @@
 
 ?>
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cadastro de fornecedores</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
+<?php
 
-  <body style= "background-color:black";>
-    <h1> <span class="badge text-bg-secondary";>PJ SISTEMA DE SEGURANÇA</span></h1>
-    <h2> <span class="badge text-bg-secondary";>Cadastro de fornecedores</span></h2>
+    include ("head.php")
+?>
+    <title>Cadastro de fornecedores</title>
+
+  <body>
+  <?php
+    include ("header.php");
+    include ("navbar.php");
+?>
+
+    <h1> <span class="badge text-bg-secondary";>Cadastro de fornecedores</span></h1>
+    <br>
     <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
         
-            <form action="#">
+            <form action="#" class="form-control">
                 
                 <div class="row col-12 mt-2">
                     <div class="col-md-6">
@@ -93,18 +96,14 @@
                         <input type="text" class="form-control" id="local" name="local_unidade">
                     </div>
                 </div>
-                <div class="mt-2 col-12 row">
-                    <div class="col-md-6 align-items-center gy-4">
-                        <a href="pagina_inicial.html" class="btn btn-primary w-100 p-3 mt-2">Voltar para a página inicial</a>
-                    </div>
-                    <div class="col-md-6 align-items-center gy-4">
-                        <button value="save" class="btn btn-success w-100 p-3">Salvar</button>
-                    </div>
-                </div>
+                
 
 
 
 
+                <?php
+            include "button-group-insert.php";
+            ?>
 
 
             </form>
@@ -112,5 +111,9 @@
     </fieldset>
 
 <script src="../js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<?php
+    include ("footer.php")
+
+?>
 </body>
 </html>

@@ -14,6 +14,8 @@ include ("head.php")
 include ("header.php");
 include ("navbar.php");
 ?>
+<h1> <span class="badge text-bg-secondary";>Cadastro de clientes</span></h1>
+    <br>
 
     <div class="form-check">
         <input class="form-check-input" type="radio" name="clientRadio" id="pessoaFisicaRadio" onclick="showpessoaFisicaRadio()">

@@ -6,7 +6,7 @@
 
 include ("head.php")
 ?>
-<title>PJ Sistema de Segurança</title>
+<title>Alteração de ordem de serviço</title>
 <body>
 
 
@@ -14,9 +14,10 @@ include ("head.php")
 include ("header.php");
 include ("navbar.php");
 ?>
-
+<h1> <span class="badge text-bg-secondary">Alteração de ordem de serviço</span></h1>
+<br>
    <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
-       <form action="#" class="row gx-3 gy1 form-control">
+       <form action="#" class="form-control">
            <div class="row col-12 mt-2">
                <div class="col-md-4">
                    <label for="nomeColaborador" class="form-label">Número da ordem de serviço</label>
@@ -27,7 +28,7 @@ include ("navbar.php");
                </div>
 
                 <?php
-                    include ("button-group.php")
+                    include ("button-group-insert.php")
                 ?>
            </div>
         </form>

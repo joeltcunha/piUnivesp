@@ -16,9 +16,10 @@ include ("header.php");
 include ("navbar.php") ;
 ?>
 
-  <br>
+<h1> <span class="badge text-bg-secondary">Alteração de cadastro dos colaboradores</span></h1>
+<br>
    <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
-       <form action="#" class="row gx-3 gy1 form-control">
+       <form action="#" class="form-control">
            <div class="row col-12 mt-2">
                <div class="col-md-2">
                    <label for="matricula" class="form-label">Matrícula</label>
@@ -35,7 +36,7 @@ include ("navbar.php") ;
                <br>
 
                <?php
-                include ("button-group.php")
+                include ("button-group-insert.php")
 
                ?>
             </div>

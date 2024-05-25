@@ -1,5 +1,6 @@
 <?php
 include 'conexao.php'; // Inclui o arquivo de conexão
+?>
 <?php
 $servername = "localhost";
 $username = "seu_usuario";
@@ -14,7 +15,7 @@ if ($conn->connect_error) {
 ?>
 
 
-
+<?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // Recebe os dados do formulário
   $tipoCliente = $_POST['clientRadio']; 

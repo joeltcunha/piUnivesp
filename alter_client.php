@@ -14,6 +14,8 @@
     include ("header.php");
     include ("navbar.php") ;
 ?>
+<h1> <span class="badge text-bg-secondary">Alteração de cadastro dos clientes</span></h1>
+<br>
   <div class="form-check">
     <input class="form-check-input" type="radio" name="clientRadio" id="pessoaFisicaRadio" onclick="toggleForm('fieldsetPessoaFisica', 'fieldsetPessoaJuridica')">
     <label class="form-check-label" for="pessoaFisicaRadio">
@@ -110,6 +112,10 @@
 document.getElementById("nomeFantasia").value = '';
     }
   </script>
+  <?php
+    include ("footer.php")
+
+?>
 </body>
 </html>
 
