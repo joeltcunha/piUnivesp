@@ -7,7 +7,7 @@
 
 include ("head.php")
 ?>
-<title>PJ Sistema de Segurança</title>
+<title>Alteração de produtos ou serviços</title>
 <body>
 
 
@@ -15,7 +15,7 @@ include ("head.php")
 include ("header.php");
 include ("navbar.php");
 ?>
-      <br>
+      <h1> <span class="badge text-bg-secondary">Alteração de produtos ou serviços</span></h1>
     <div class="form-check">
         <input class="form-check-input" type="radio" name="flexRadioDefault" id="productRadio" onclick="showproductRadio()">
         <label class="form-check-label" for="productRadio">
@@ -30,7 +30,7 @@ include ("navbar.php");
     </div>
       <br>
     <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end" id="fieldsetProduct"  style="display:none;">
-        <form action="#" class="row gx-3 gy1 form-control">
+        <form action="#" class="form-control">
             <div class="row">
                 <div class="col-md-4">
                     <label for="nomeColaborador" class="form-label">Nome do produto</label>
@@ -48,7 +48,7 @@ include ("navbar.php");
                 </div>
             </div>
                 <?php
-                include ("button-group.php")
+                include ("button-group-insert.php")
 
                 ?>
         </form>
@@ -56,7 +56,7 @@ include ("navbar.php");
   <br>
 
   <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end" id="fieldsetService">
-        <form action="#" class="gx-3 gy1 form-control">
+        <form action="#" class="form-control">
             <div class="row">
                 <div class="col-md-4">
                     <label for="osNumber" class="form-label">Número da OS</label>
@@ -74,7 +74,7 @@ include ("navbar.php");
                     </div>
                 </div>
                 <?php
-                include ("button-group.php")
+                include ("button-group-insert.php")
 
                 ?>
             </div>
@@ -103,6 +103,10 @@ include ("navbar.php");
 
         
   </script>
+  <?php
+    include ("footer.php")
+
+?>
 </body>
 </html>
 

@@ -52,14 +52,9 @@ include ("navbar.php");
             </div>
             <!-- Restante dos campos para Pessoa Jurídica -->
             <!-- Botão de Cancelar e Limpar -->
-            <div class="mt-2 col-12 row">
-                <div class="col-md-6 align-items-center gy-4">
-                    <button value="cancel" class="btn btn-danger w-100 p-3" onclick="voltarPagina()">Cancelar</button>
-                </div>
-                <div class="col-md-6 align-items-center gy-4">
-                    <button type="reset" class="btn btn-secondary w-100 p-3">Limpar</button>
-                </div>
-            </div>
+            <?php
+            include "button-group.php";
+            ?>
 
         </form>
     </fieldset>
@@ -85,14 +80,9 @@ include ("navbar.php");
             </div>
             <!-- Restante dos campos para Pessoa Física -->
             <!-- Botão de Cancelar e Limpar -->
-            <div class="mt-2 col-12 row">
-                <div class="col-md-6 align-items-center gy-4">
-                    <button value="cancel" class="btn btn-danger w-100 p-3" onclick="voltarPagina()">Cancelar</button>
-                </div>
-                <div class="col-md-6 align-items-center gy-4">
-                    <button type="reset" class="btn btn-secondary w-100 p-3">Limpar</button>
-                </div>
-            </div>
+            <?php
+            include "button-group.php";
+            ?>
         </form>
     </fieldset>
 

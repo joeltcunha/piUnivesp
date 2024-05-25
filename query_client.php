@@ -58,7 +58,7 @@ include ("navbar.php");
     <br>
 
     <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end" id="fieldsetPessoaFisica" style="display:none;">
-        <form action="#" onsubmit="return validarCPF()">
+        <form action="#" onsubmit="return validarCPF()" class="form-control"> 
             <div class="row mt-2">
                 <div class="col-md-4">
                     <label for="nomeFisica" class="form-label">Nome</label>
@@ -189,7 +189,10 @@ include "footer.php";
             return true;
         }
     </script>
+<?php
+    include ("footer.php")
 
+?>
 </body>
 </html>
 
