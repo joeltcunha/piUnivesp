@@ -26,7 +26,7 @@ if (isset($ordemDeServico))
 
 include ("head.php")
 ?>
-<title>PJ Sistema de Segurança</title>
+<title>Cadastro de ordens de serviço</title>
 <body>
 
 
@@ -34,7 +34,11 @@ include ("head.php")
 include ("header.php");
 include ("navbar.php");
 ?>
+<br>
+<div class="ps-3">
     <h2> <span class="";>Cadastro de ordens de serviço</span></h2>
+</div>
+
     <br>
 
     <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end" id="fieldsetProduct">

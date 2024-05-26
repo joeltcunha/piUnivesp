@@ -35,8 +35,15 @@ include ("head.php")
 <?php
 include ("header.php");
 include ("navbar.php");
+
 ?>
+<br>
+<div class="ps-3">
     <h2> <span class="mt-2";>Cadastro de fornecedores</span></h2>
+</div>
+
+
+        <br>
     <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
         
             <form action="#" method="post">

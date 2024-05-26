@@ -7,7 +7,7 @@
 
 include ("head.php")
 ?>
-<title>PJ Sistema de Segurança</title>
+<title>Alteração de produtos</title>
 <body>
 
 
@@ -16,19 +16,8 @@ include ("header.php");
 include ("navbar.php");
 ?>
       <br>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="productRadio" onclick="showproductRadio()">
-        <label class="form-check-label" for="productRadio">
-          Produto
-        </label>
-    </div>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="serviceRadio" checked onclick="showServiceRadio()">
-        <label class="form-check-label" for="productRadio">
-          Serviço
-        </label>
-    </div>
-      <br>
+    <h2> <span class="ps-3";>Alteração de produtos</span></h2>
+    <br>
     <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end" id="fieldsetProduct"  style="display:none;">
         <form action="#" class="row gx-3 gy1 form-control">
             <div class="row">
@@ -83,6 +72,9 @@ include ("navbar.php");
     </fieldset>
 
 <br>
+<?php
+include "footer.php";
+?>
 
   <script>
    

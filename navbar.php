@@ -11,63 +11,63 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="ordemServicoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="_imagem/lista-de-controle-icon.png" alt="Icone lista de desejos" style="width: 25px; padding-right: 8px">Ordem de Serviço
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="ordemServicoDropdown">
-                                <li><a class="dropdown-item" href="insert_order.php">Incluir Ordem de Serviço</a></li>
-                                <li><a class="dropdown-item" href="delete_order.html">Excluir Ordem de Serviço</a></li>
-                                <li><a class="dropdown-item" href="query_order.html">Consultar Ordem de Serviço</a></li>
-                                <li><a class="dropdown-item" href="alter_order.html">Alterar Ordem de Serviço</a></li>
-                            </ul>
-                        </li>
+<!--                        <li class="nav-item dropdown">-->
+<!--                            <a class="nav-link dropdown-toggle" href="#" id="ordemServicoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                                <img src="_imagem/lista-de-controle-icon.png" alt="Icone lista de desejos" style="width: 25px; padding-right: 8px">Ordem de Serviço-->
+<!--                            </a>-->
+<!--                            <ul class="dropdown-menu" aria-labelledby="ordemServicoDropdown">-->
+<!--                                <li><a class="dropdown-item" href="insert_order.php">Incluir Ordem de Serviço</a></li>-->
+<!--                                <li><a class="dropdown-item" href="delete_order.html">Excluir Ordem de Serviço</a></li>-->
+<!--                                <li><a class="dropdown-item" href="query_order.html">Consultar Ordem de Serviço</a></li>-->
+<!--                                <li><a class="dropdown-item" href="alter_order.html">Alterar Ordem de Serviço</a></li>-->
+<!--                            </ul>-->
+<!--                        </li>-->
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="produtosServicosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="_imagem/cctv-icon.png" alt="Icone CCTV" style="width: 25px; padding-right: 8px">Produtos e Serviços
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="produtosServicosDropdown">
-                                <li><a class="dropdown-item" href="insert_product.php">Incluir Produto ou Serviço</a></li>
-                                <li><a class="dropdown-item" href="delete_product.php">Excluir Produto ou Serviço</a></li>
-                                <li><a class="dropdown-item" href="query_product.php">Consultar Produto ou Serviço</a></li>
-                                <li><a class="dropdown-item" href="alter_product.php">Alterar Produto ou Serviço</a></li>
-                            </ul>
-                        </li>
+<!--                        <li class="nav-item dropdown">-->
+<!--                            <a class="nav-link dropdown-toggle" href="#" id="produtosServicosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                                <img src="_imagem/cctv-icon.png" alt="Icone CCTV" style="width: 25px; padding-right: 8px">Produtos e Serviços-->
+<!--                            </a>-->
+<!--                            <ul class="dropdown-menu" aria-labelledby="produtosServicosDropdown">-->
+<!--                                <li><a class="dropdown-item" href="insert_product.php">Incluir Produto ou Serviço</a></li>-->
+<!--                                <li><a class="dropdown-item" href="delete_product.php">Excluir Produto ou Serviço</a></li>-->
+<!--                                <li><a class="dropdown-item" href="query_product.php">Consultar Produto ou Serviço</a></li>-->
+<!--                                <li><a class="dropdown-item" href="alter_product.php">Alterar Produto ou Serviço</a></li>-->
+<!--                            </ul>-->
+<!--                        </li>-->
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="clientesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="_imagem/cliente-icon.png" alt="Icone cliente" style="width: 25px; padding-right: 8px">Clientes
+                                <img src="_imagem/cliente-icon.png" alt="Icone cliente" style="width: 25px; padding-right: 8px">Ordem de serviços
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="clientesDropdown">
-                                <li><a class="dropdown-item" href="insert_client.php">Cadastro</a></li>
-                                <li><a class="dropdown-item" href="delete_client.php">Excluir Cliente</a></li>
-                                <li><a class="dropdown-item" href="query_client.php">Consultar Cliente</a></li>
-                                <li><a class="dropdown-item" href="alter_client.php">Alterar Cliente</a></li>
+                            <ul class="dropdown-menu" aria-labelledby="colaboradoresDropdown">
+                                <li><a class="dropdown-item" href="insert_order.php">Nova OS</a></li>
+                                <li><a class="dropdown-item" href="alter_order.php">Alterar</a></li>
                             </ul>
                         </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="fornecedoresDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="_imagem/industria-alimenticia.png" alt="Icone indústria" style="width: 25px; padding-right: 8px">Fornecedores
+                                <img src="_imagem/industria-alimenticia.png" alt="Icone indústria" style="width: 25px; padding-right: 8px">Cadastros
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="fornecedoresDropdown">
-                                <li><a class="dropdown-item" href="insert_supplier.php">Incluir Fornecedor</a></li>
-                                <li><a class="dropdown-item" href="delete_supplier.php">Excluir Fornecedor</a></li>
-                                <li><a class="dropdown-item" href="query_supplier.php">Consultar Fornecedor</a></li>
-                                <li><a class="dropdown-item" href="alter_supplier.php">Alterar Fornecedor</a></li>
+                                <li><a class="dropdown-item" href="insert_client.php">Clientes</a></li>
+                                <li><a class="dropdown-item" href="insert_supplier.php">Fornecedores</a></li>
+                                <li><a class="dropdown-item" href="insert_product.php">Produtos</a></li>
+                                <li><a class="dropdown-item" href="insert_servico.php">Serviços</a></li>
+                                <li><a class="dropdown-item" href="insert_employee.php">Colaboradores</a></li>
                             </ul>
                         </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="colaboradoresDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="_imagem/worker-icon.png" alt="Icone Worker" style="width: 25px; padding-right: 8px">Colaboradores
+                                <img src="_imagem/worker-icon.png" alt="Icone Worker" style="width: 25px; padding-right: 8px">Alterações
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="colaboradoresDropdown">
-                                <li><a class="dropdown-item" href="insert_employee.php">Incluir Colaborador</a></li>
-                                <li><a class="dropdown-item" href="delete_employee.php">Excluir Colaborador</a></li>
-                                <li><a class="dropdown-item" href="query_employee.php">Consultar Colaborador</a></li>
-                                <li><a class="dropdown-item" href="alter_employee.php">Alterar Colaborador</a></li>
+                                <li><a class="dropdown-item" href="alter_client.php">Clientes</a></li>
+                                <li><a class="dropdown-item" href="alter_supplier.php">Fornecedores</a></li>
+                                <li><a class="dropdown-item" href="alter_product.php">Produtos</a></li>
+                                <li><a class="dropdown-item" href="alter_service.php">Serviços</a></li>
+                                <li><a class="dropdown-item" href="alter_employee.php">Colaboradores</a></li>
                             </ul>
                         </li>
 

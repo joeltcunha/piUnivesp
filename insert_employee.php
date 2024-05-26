@@ -31,15 +31,17 @@ if (isset($nome))
 
 include ("head.php")
 ?>
-<title>Cadastro de Prestadores</title>
+<title>Cadastro de Colaboradores</title>
 <body>
 
 
 <?php
 include ("header.php");
 include ("navbar.php");
+
 ?>
-    <h2> <span class="";>Cadastro de prestadores</span></h2>
+<br>
+    <h2> <span class="ps-3";>Cadastro de colaboradores</span></h2>
     <br>
     <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
             <form action="#" class="row gx-3 gy1">

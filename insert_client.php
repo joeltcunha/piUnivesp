@@ -45,16 +45,21 @@ include ("head.php")
 include ("header.php");
 include ("navbar.php");
 ?>
-
+<br>
+<h2> <span class="ps-3";>Cadastro de clientes</span></h2>
+<br>
+<div class="ps-3">
     <div class="form-check">
         <input class="form-check-input" type="radio" name="clientRadio" id="pessoaFisicaRadio" onclick="showpessoaFisicaRadio()">
         <label class="form-check-label" for="pessoaFisicaRadio">Pessoa física</label>
-      </div>
+    </div>
 
-      <div class="form-check">
+    <div class="form-check">
         <input class="form-check-input" type="radio" name="clientRadio" id="pessoaJuridicaRadio" aria-checked="true" checked onclick="pessoaJuridicaRadio()">
         <label class="form-check-label" for="pessoaJuridicaRadio">Pessoa jurídica</label>
-      </div>
+    </div>
+</div>
+
 
       <br>
        <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end" id="fieldsetPessoaJuridica">

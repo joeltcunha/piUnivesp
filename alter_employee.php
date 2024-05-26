@@ -17,6 +17,8 @@ include ("navbar.php") ;
 ?>
 
   <br>
+    <h2> <span class="ps-3";>Alteração do cadastro de colaboradores</span></h2>
+    <br>
    <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
        <form action="#" class="row gx-3 gy1 form-control">
            <div class="row col-12 mt-2">

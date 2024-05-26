@@ -9,7 +9,7 @@ include "functions/funcao_inserir.php";
 @$garantia = $_REQUEST['warrantPeriod'];
 @$valorDeCusto = $_REQUEST['productCost'];
 @$valorDeVenda = $_REQUEST['productValue'];
-@$servico = $_REQUEST['serviceDescription'];
+
 
 if (isset($nome))
 {
@@ -18,11 +18,6 @@ if (isset($nome))
     ), 'produtos');
     echo "<script>alert('Cadastro de produto realizado com sucesso!!!');</script>";
 
-}elseif (isset($servico)){
-    inserir(array("servico"), array(
-        $servico
-    ), "servicos");
-    echo "<script>alert('Cadastro de serviço realizado com sucesso!!!');</script>";
 }
 
 
@@ -33,7 +28,7 @@ if (isset($nome))
 
 include ("head.php")
 ?>
-<title>PJ Sistema de Segurança</title>
+<title>Cadastro de produtos</title>
 <body>
 
 
@@ -41,22 +36,12 @@ include ("head.php")
 include ("header.php");
 include ("navbar.php");
 ?>
-<h2> <span class="";>Cadastro de serviços e produtos</span></h2>
 <br>
-<div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="productRadio" onclick="showproductRadio()">
-    <label class="form-check-label" for="productRadio">
-        Produto
-    </label>
-</div>
-<div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="serviceRadio" checked onclick="showServiceRadio()">
-    <label class="form-check-label" for="productRadio">
-        Serviço
-    </label>
+<div class="ps-3">
+    <h2> <span class="";>Cadastro de produtos</span></h2>
 </div>
 <br>
-<fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end" id="fieldsetProduct" style="display:none;">
+<fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end" id="fieldsetProduct" >
     <form action="#" class="gx-3 form-control">
         <div class="row mt-2">
             <div class="col-md-3">
@@ -96,45 +81,11 @@ include ("navbar.php");
     </form>
 
 </fieldset>
-<br>
-<br>
-<fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end" id="fieldsetService">
-    <form action="#" class="gx-3 gy-1 form-control">
-        <div class="row">
-            <div class="col-md-12">
-                <label for="serviceDescription" class="form-label">Descrição serviço</label>
-                <input type="text" class="form-control" id="serviceDescription" name="serviceDescription">
-            </div>
-        </div>
-
-        <?php
-        include "button-group-insert.php";
-        ?>
-    </form>
-
-</fieldset>
 
 <?php
 include ("footer.php")
 
 ?>
-<script src="../js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-<script>
-    function showproductRadio() {
-        document.getElementById("fieldsetProduct").style.display = "block";
-        document.getElementById("fieldsetService").style.display = "none";
-    }
 
-    function showServiceRadio() {
-        document.getElementById("fieldsetService").style.display = "block";
-        document.getElementById("fieldsetProduct").style.display = "none";
-    }
-
-
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-</script>
 </body>
 </html>
