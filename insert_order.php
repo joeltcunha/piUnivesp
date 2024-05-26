@@ -2,18 +2,19 @@
 
 ?>
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cadastro de produtos e serviços</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
+<?php
+
+include ("head.php")
+?>
+<title>PJ Sistema de Segurança</title>
+<body>
 
 
-  <body style= "background-color:black";>
-    <h1> <span class="badge text-bg-secondary";>PJ SISTEMA DE SEGURANÇA</span></h1>
-    <h2> <span class="badge text-bg-secondary";>Ordem de serviços</span></h2>
+<?php
+include ("header.php");
+include ("navbar.php");
+?>
+    <h2> <span class="";>Ordem de serviços</span></h2>
     <br>
     <div class="form-check">
         <input class="form-check-input" type="radio" name="flexRadioDefault" id="productRadio" onclick="showproductRadio()">
@@ -29,21 +30,20 @@
       </div>
       <br>
     <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end" id="fieldsetProduct" style="display:none;">
-            <form action="#" class="row gx-3 gy1">
-                
-                    <div class="col-md-5">
-                        <label for="productDescription" class="form-label">Descrição produto</label>
-                        <input type="text" class="form-control" id="productDescription" name="descricao_produto">
-                    </div>
+            <form action="#" class="row gx-3  form-control">
+                <div class="col-md-5">
+                    <label for="productDescription" class="form-label">Descrição produto</label>
+                    <input type="text" class="form-control" id="productDescription" name="descricao_produto">
+                </div>
                     <div class="col-md-5">
                         <label for="manufacturer" class="form-label">Fabricante</label>
-                        <input type="manufacturer" class="form-control" id="manufacturer" name="manufacturer">
+                        <input type="text" class="form-control" id="manufacturer" name="manufacturer">
                     </div>
                 </div>
                 <div class="row col-12 mt-2">
                     <div class="col-md-4">
-                        <label for="manufacturerNumbe" class="form-label">Código fabricante</label>
-                        <input type="manufacturerNumbe" class="form-control" id="manufacturerNumbe" name="manufacturerNumber">
+                        <label for="manufacturerNumber" class="form-label">Código fabricante</label>
+                        <input type="text" class="form-control" id="manufacturerNumber" name="manufacturerNumber">
                     </div>
                     <div class="col-md-2">
                         <label for="warrantPeriod" class="form-label">Prazo de garantia</label>

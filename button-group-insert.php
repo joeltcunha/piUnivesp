@@ -10,6 +10,6 @@
         <button value="save" class="btn btn-warning w-100 p-3" onclick="limparCampos()">Limpar</button>
     </div>
     <div class="col-md-3 align-items-center gy-4">
-        <button value="save" class="btn btn-success w-100 p-3" onclick="#">Salvar</button>
+        <input type="submit" value="Enviar" class="btn btn-success w-100 p-3 text-white" name="sbmt" >
     </div>
 </div>
