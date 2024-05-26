@@ -1,5 +1,25 @@
 <?php
 
+include "functions/funcao_inserir.php";
+
+@$ordemDeServico = $_REQUEST['serviceNumber'];
+@$serviceDescript = $_REQUEST['serviceDescrip'];
+@$cliente = $_REQUEST['customer'];
+@$produtos = $_REQUEST['productName'];
+@$garantia = $_REQUEST['warranty'];
+@$serviceValue = $_REQUEST['serviceValue'];
+
+if (isset($ordemDeServico))
+{
+    inserir(array("osNumber", 'cliente', 'descricaoServico','produtos', 'garantia', 'valorTotal'), array(
+       $ordemDeServico, $cliente, $serviceDescript, $produtos, $garantia, $serviceValue
+    ), 'ordemservicos');
+    echo "<script>alert('Ordem de serviço realizada com sucesso!!!');</script>";
+
+}
+
+
+
 ?>
 <!DOCTYPE html>
 <?php
@@ -14,88 +34,59 @@ include ("head.php")
 include ("header.php");
 include ("navbar.php");
 ?>
-    <h2> <span class="";>Ordem de serviços</span></h2>
+    <h2> <span class="";>Cadastro de ordens de serviço</span></h2>
     <br>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="productRadio" onclick="showproductRadio()">
-        <label class="form-check-label" for="productRadio">
-          Produto
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="serviceRadio" checked onclick="showServiceRadio()">
-        <label class="form-check-label" for="productRadio">
-          Serviço
-        </label>
-      </div>
-      <br>
-    <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end" id="fieldsetProduct" style="display:none;">
-            <form action="#" class="row gx-3  form-control">
-                <div class="col-md-5">
-                    <label for="productDescription" class="form-label">Descrição produto</label>
-                    <input type="text" class="form-control" id="productDescription" name="descricao_produto">
+
+    <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end" id="fieldsetProduct">
+            <form action="#" class="gx-3 form-control">
+                <div class="row mt-2">
+                    <div class="col-md-2">
+                        <label for="serviceNumber" class="form-label">Número da OS</label>
+                        <input type="text" class="form-control" id="serviceNumber" name="serviceNumber">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="customer" class="form-label">Cliente</label>
+                        <input type="text" class="form-control" id="customer" name="customer">
+                    </div>
+
                 </div>
-                    <div class="col-md-5">
-                        <label for="manufacturer" class="form-label">Fabricante</label>
-                        <input type="text" class="form-control" id="manufacturer" name="manufacturer">
+                <div class="row justify-content-end">
+                    <div class="col-md-10">
+                        <label for="serviceDescrip" class="form-label">Descrição dos serviços</label>
+                        <textarea rows="2" cols="60" class="form-control" id="serviceDescrip" name="serviceDescrip"></textarea>
                     </div>
                 </div>
-                <div class="row col-12 mt-2">
-                    <div class="col-md-4">
-                        <label for="manufacturerNumber" class="form-label">Código fabricante</label>
-                        <input type="text" class="form-control" id="manufacturerNumber" name="manufacturerNumber">
+                <div>
+                    <div class="row justify-content-end">
+                        <div class="col-md-10">
+                            <label for="productName" class="form-label">Produtos utilizados</label>
+                            <textarea rows="1" cols="5" class="form-control" id="productName" name="productName"></textarea>
+                    </div>
+
+                <div class="row mt-2 justify-content-end">
+                    <div class="col-md-2">
+                        <label for="warranty" class="form-label">Prazo de garantia</label>
+                        <input type="text" class="form-control" id="warranty" name="warranty">
                     </div>
                     <div class="col-md-2">
-                        <label for="warrantPeriod" class="form-label">Prazo de garantia</label>
-                        <input type="tel" class="form-control" id="warrantPeriod" name="warrantPeriod">
+                        <label for="serviceValue" class="form-label">Valor do serviço</label>
+                        <input type="tel" class="form-control" id="serviceValue" name="serviceValue">
                     </div>
-                    <div class="col-md-6">
-                        <label for="productCost" class="form-label">Valor de custo</label>
-                        <input type="tel" class="form-control" id="productCost" name="productCost">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="productValue" class="form-label">Valor de venda</label>
-                        <input type="tel" class="form-control" id="productValue" name="productValue">
-                    </div>
-                <div class="row col-12 mt-2">
-                    <div class="col-md-6 align-items-center gy-4">
-                        <a href="pagina_inicial.html" class="btn btn-primary w-100 p-3 mt-2">Voltar para a página inicial</a>
-                    </div>
-                    <div class="col-md-6 align-items-center gy-4">
-                        <button value="save" class="btn btn-success w-100 p-3">Salvar</button>
-                    </div>
-                </div>
+                    <?php
+                    include "button-group-insert.php";
+                    ?>
+
             </form>
 
     </fieldset>
-    <br>
-    <br>
-    <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end" id="fieldsetService">
-        <form action="#" class="row gx-3 gy1">
-            
-                <div class="col-md-5">
-                    <label for="serviceDescription" class="form-label">Descrição serviço</label>
-                    <input type="text" class="form-control" id="serviceDescription" name="serviceDescription">
-                </div>
-            
-                <div class="col-md-6">
-                    <label for="serviceValue" class="form-label">Valor</label>
-                    <input type="tel" class="form-control" id="serviceValue" name="serviceValue">
-                </div>
-            
-            <div class="row col-12 mt-2">
-                <div class="col-md-6 align-items-center gy-4">
-                    <a href="pagina_inicial.html" class="btn btn-primary w-100 p-3 mt-2">Voltar para a página inicial</a>
-                </div>
-                <div class="col-md-6 align-items-center gy-4">
-                    <button value="save" class="btn btn-success w-100 p-3">Salvar</button>
-                </div>
-            </div>
-        </form>
+
 
 </fieldset>
 
+<?php
+include ("footer.php")
 
+?>
 <script src="../js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script>
          function showproductRadio() {

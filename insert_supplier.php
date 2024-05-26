@@ -1,4 +1,27 @@
 <?php
+include "functions/funcao_inserir.php";
+
+@$matricula = $_REQUEST['matricula'];
+@$nome = $_REQUEST['nomeColaborador'];
+@$cpf = $_REQUEST['cpf'];
+@$cep = $_REQUEST['cep'];
+@$logradouro = $_REQUEST['logradouro'];
+@$numero_end = $_REQUEST['numero_end'];
+@$complemento_end = $_REQUEST['complemento_end'];
+@$bairro = $_REQUEST['bairro'];
+@$cidade = $_REQUEST['cidade'];
+@$uf = $_REQUEST['uf'];
+@$email = $_REQUEST['email'];
+@$telefone = $_REQUEST['telefone'];
+
+if (isset($nome))
+{
+    inserir(array("matricula", "nome", 'cpf', 'cep','endereco', 'numero', 'complemento', 'bairro', "cidade", 'uf','email', 'telefone'), array(
+        $matricula, $nome, $cpf, $cep, $logradouro,$numero_end, $complemento_end, $bairro, $cidade, $uf, $email, $telefone
+    ), "prestadores");
+    echo "<script>alert('Cadastro de Prestadores realizado com sucesso!!!');</script>";
+
+}
 
 ?>
 <!DOCTYPE html>
