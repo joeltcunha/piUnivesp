@@ -26,15 +26,15 @@ if (isset($nome))
 <!DOCTYPE html>
 <?php
 
-include ("head.php")
+include("head.php")
 ?>
 <title>Cadastro de produtos</title>
 <body>
 
 
 <?php
-include ("header.php");
-include ("navbar.php");
+include("header.php");
+include("navbar.php");
 ?>
 <br>
 <div class="ps-3">
@@ -83,7 +83,7 @@ include ("navbar.php");
 </fieldset>
 
 <?php
-include ("footer.php")
+include("footer.php")
 
 ?>
 

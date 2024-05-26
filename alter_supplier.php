@@ -4,15 +4,15 @@
 <!DOCTYPE html>
 <<?php
 
-include ("head.php")
+include("head.php")
 ?>
 <title>PJ Sistema de Segurança</title>
 <body>
 
 
 <?php
-include ("header.php");
-include ("navbar.php");
+include("header.php");
+include("navbar.php");
 ?>
 
 <br>

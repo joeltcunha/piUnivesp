@@ -4,15 +4,15 @@
 
 <head>
     <?php
-        include ("head.php")
+    include("head.php")
     ?>
     <title>Alteração de cadastro dos clientes</title>
 </head>
 
 <body>
 <?php
-    include ("header.php");
-    include ("navbar.php") ;
+    include("header.php");
+    include("navbar.php");
 ?>
 <br>
 <h2> <span class="ps-3";>Alteração do cadastro de clientes</span></h2>

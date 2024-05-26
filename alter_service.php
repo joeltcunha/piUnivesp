@@ -5,15 +5,15 @@
 <html lang="br" data-bs-theme="dark">
 <?php
 
-include ("head.php")
+include("head.php")
 ?>
 <title>Alteração de serviços</title>
 <body>
 
 
 <?php
-include ("header.php");
-include ("navbar.php");
+include("header.php");
+include("navbar.php");
 ?>
     <br>
     <h2> <span class="ps-3";>Alteração de serviços</span></h2>
@@ -37,7 +37,7 @@ include ("navbar.php");
                     </div>
                 </div>
                 <?php
-                include ("button-group.php")
+                include("button-group.php")
 
                 ?>
             </div>

@@ -29,15 +29,15 @@ if (isset($nome))
 
 <?php
 
-include ("head.php")
+include("head.php")
 ?>
 <title>Cadastro de Colaboradores</title>
 <body>
 
 
 <?php
-include ("header.php");
-include ("navbar.php");
+include("header.php");
+include("navbar.php");
 
 ?>
 <br>
@@ -115,7 +115,7 @@ include ("navbar.php");
     </fieldset>
 
 <?php
-include ("footer.php")
+include("footer.php")
 
 ?>
 

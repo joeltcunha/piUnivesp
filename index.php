@@ -7,15 +7,15 @@
 <!DOCTYPE html>
 <?php
 
-    include ("head.php")
+include("head.php")
 ?>
     <title>PJ Sistema de Segurança</title>
 <body>
 
 
 <?php
-    include ("header.php");
-    include ("navbar.php");
+    include("header.php");
+    include("navbar.php");
 ?>
 
 <div class="container align-content-center">
@@ -53,7 +53,7 @@
 </div>
 
 <?php
-    include ("footer.php")
+include("footer.php")
 
 ?>
 

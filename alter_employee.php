@@ -5,15 +5,15 @@
 <html lang="br" data-bs-theme="dark">
 <head>
     <?php
-    include ("head.php")
+    include("head.php")
     ?>
     <title>Alteração de cadastro dos colaboradores</title>
 </head>
 
 <body>
 <?php
-include ("header.php");
-include ("navbar.php") ;
+include("header.php");
+include("navbar.php");
 ?>
 
   <br>
@@ -37,7 +37,7 @@ include ("navbar.php") ;
                <br>
 
                <?php
-                include ("button-group.php")
+               include("button-group.php")
 
                ?>
             </div>

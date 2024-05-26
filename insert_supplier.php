@@ -26,15 +26,15 @@ if (isset($razaoSocial) and isset($cnpj))
 <!DOCTYPE html>
 <?php
 
-include ("head.php")
+include("head.php")
 ?>
 <title>Cadastro de Fornecedores</title>
 <body>
 
 
 <?php
-include ("header.php");
-include ("navbar.php");
+include("header.php");
+include("navbar.php");
 
 ?>
 <br>

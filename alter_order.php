@@ -4,15 +4,15 @@
 <!DOCTYPE html>
 <?php
 
-include ("head.php")
+include("head.php")
 ?>
 <title>Alteração de ordem de serviço</title>
 <body>
 
 
 <?php
-include ("header.php");
-include ("navbar.php");
+include("header.php");
+include("navbar.php");
 ?>
 
    <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
@@ -36,7 +36,7 @@ include ("navbar.php");
                    </div>
                </div>
                 <?php
-                    include ("button-group.php")
+                include("button-group.php")
                 ?>
            </div>
         </form>
@@ -50,7 +50,7 @@ include ("navbar.php");
         
   </script>
 <?php
-    include "footer.php"
+include "footer.php"
 ?>
 </body>
 </html>

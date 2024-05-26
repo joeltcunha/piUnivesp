@@ -35,15 +35,15 @@ if (isset($razaoSocial) and isset($cnpj))
 <!DOCTYPE html>
 <?php
 
-include ("head.php")
+include("head.php")
 ?>
 <title>Cadastro de Clientes</title>
 <body>
 
 
 <?php
-include ("header.php");
-include ("navbar.php");
+include("header.php");
+include("navbar.php");
 ?>
 <br>
 <h2> <span class="ps-3";>Cadastro de clientes</span></h2>
@@ -125,7 +125,7 @@ include ("navbar.php");
 
                </div>
                <?php
-                    include "button-group-insert.php"
+               include "button-group-insert.php"
                ?>
 
             </form>
