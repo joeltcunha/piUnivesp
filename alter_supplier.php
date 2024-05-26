@@ -2,7 +2,7 @@
 
 ?>
 <!DOCTYPE html>
-<<?php
+<?php
 
 include("head.php")
 ?>
