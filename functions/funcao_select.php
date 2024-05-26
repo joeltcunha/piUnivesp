@@ -1,10 +1,10 @@
 <?php
-    include ("../includes/conexao.php");
-    include ("../includes/fecha_conexao.php");
+    include ("includes/conexao.php");
+    include ("includes/fecha_conexao.php");
 
     function select ($tabela, $coluna = "*", $where = null, $ordem = null, $limite = null )
     {
-        $sql = "select {$coluna} from {$tabela} {$where} {$ordem} {$limite}";
+        $sql = "SELECT {$coluna} FROM {$tabela} {$where} {$ordem} {$limite}";
 
         if ($conexao = conectar()) {
             if ($query = mysqli_query($conexao, $sql)) {

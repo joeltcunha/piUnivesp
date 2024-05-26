@@ -1,4 +1,8 @@
 <?php
+include "functions/funcao_select.php";
+
+$consulta = select("clientes", "Nome", NULL, "ORDER BY nome ASC");
+
 
 ?>
 <!DOCTYPE html>
@@ -16,44 +20,66 @@ include ("header.php");
 include ("navbar.php");
 ?>
 
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="clientRadio" id="pessoaFisicaRadio" onclick="toggleForm('fieldsetPessoaFisica', 'fieldsetPessoaJuridica')">
-        <label class="form-check-label" for="pessoaFisicaRadio">Pessoa física</label>
-    </div>
 
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="clientRadio" id="pessoaJuridicaRadio" aria-checked="true" onclick="toggleForm('fieldsetPessoaJuridica', 'fieldsetPessoaFisica')">
-        <label class="form-check-label" for="pessoaJuridicaRadio">Pessoa jurídica</label>
-    </div>
-    <br>
+
     <fieldset class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end" id="fieldsetPessoaJuridica">
-        <form action="#" onsubmit="return validarCNPJ()" method="post" class="form-control">
+        <form action="#"  method="post" class="form-control">
             <div class="row mt-2">
                 <div class="col-md-4">
                     <label for="razaoSocial" class="form-label">Razão Social</label>
-                    <input type="text" class="form-control" id="razaoSocial" name="razao_social">
+                    <input type="text" class="form-control" id="razaoSocial" name="razaoSocial">
                 </div>
-                <div class="col-md-4">
-                    <label for="nomeFantasia" class="form-label">Nome Fantasia</label>
-                    <input type="text" class="form-control" id="nomeFantasia" name="nome_fantasia">
-                </div>
+
                 <div class="col-md-4">
                     <label for="cnpj" class="form-label">CNPJ</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="cnpjJuridica" placeholder="Somente números" name="cnpj" aria-label="Somente números" aria-describedby="button-addon0" required>
-                        <button class="btn btn-outline-primary" type="button" id="button-addon0" onclick="consultarClienteJuridico()">Pesquisar</button>
+                        <input type="text" class="form-control" id="cnpjJuridica" placeholder="Somente números" name="cnpj">
+                        <input type="submit" value="Pesquisar">
                     </div>
                     <div class="invalid-feedback">CNPJ inválido. Favor digitar novamente.</div>
                 </div>
             </div>
 
-            <!-- Restante dos campos para Pessoa Jurídica -->
-            <!-- Botão de Cancelar e Limpar -->
-            <?php
-            include "button-group-insert.php";
-            ?>
         </form>
     </fieldset>
+<div class="table">
+    <table>
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Razão Social</th>
+            <th scope="col">CNPJ</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Telefone</th>
+        </tr>
+        </thead>
+        <?php
+        @$nome = $_REQUEST['razaoSocial'];
+        if ($consulta == true) {
+            if (isset($nome))
+            {
+                for ($i = 0; $i < count($consulta); $i ++) {
+
+                    ?>
+
+                    <tr>
+                        <td><?php echo $consulta[$i]['clienteID'] ?></td>
+                        <td><?php echo $consulta[$i]['Nome'] ?></td>
+                        <td><?php echo $consulta[$i]['cnpj']; ?></td>
+                        <td><?php echo $consulta[$i]['email']; ?></td>
+                        <td><?php echo $consulta[$i]['telefone']; ?></td>
+                    </tr>
+
+                    <?php
+                }
+            }else
+            {
+                echo "Nenhum dado encontrado";
+            }
+        }
+        ?>
+    </table>
+</div>
 
     <br>
 
